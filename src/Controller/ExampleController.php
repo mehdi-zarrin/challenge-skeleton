@@ -7,6 +7,7 @@ namespace App\Controller;
 use App\DataTransferObject\Request\AddressRequestDto;
 use App\DataTransferObject\Request\UserDto;
 use App\DataTransferObject\Response\ValidationErrorResponseDto;
+use App\Service\ExampleService\ExampleServiceInterface;
 use App\Service\Geocode\GeocoderInterface;
 use App\Transformer\HttpRequestTransformer;
 use App\Transformer\HttpResponseTransformer;
@@ -26,13 +27,13 @@ class ExampleController extends AbstractController
     private HttpResponseTransformer $httpResponseTransformer;
 
     public function __construct(
-        GeocoderInterface $geocoder,
+        ExampleServiceInterface $exampleService,
         HttpRequestTransformer $httpRequestTransformer,
         ValidatorInterface $validator,
         ValidationErrorTransformer $validationErrorTransformer,
         HttpResponseTransformer $httpResponseTransformer
     ) {
-        $this->geocoder = $geocoder;
+        $this->exampleService = $exampleService;
         $this->httpRequestTransformer = $httpRequestTransformer;
         $this->validator = $validator;
         $this->validationErrorTransformer = $validationErrorTransformer;
