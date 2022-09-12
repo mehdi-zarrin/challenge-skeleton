@@ -1,9 +1,9 @@
-services:
-  - docker
+#services:
+#  - docker
 
-before_install:
-  - make build
+#before_install:
+#  - make build
 
-script:
-  - make analyse-code
-  - make test
+#script:
+#  - make analyse-code
+#  - make test
