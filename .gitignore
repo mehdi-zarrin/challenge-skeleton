@@ -1,7 +1,7 @@
 .idea
 .env
-docker
-
+/docker/mysql/
+!/docker/mysql/.gitkeep
 
 ###> symfony/framework-bundle ###
 /.env.local

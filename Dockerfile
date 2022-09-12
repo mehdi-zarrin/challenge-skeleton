@@ -2,7 +2,13 @@ FROM php:8.1-fpm
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN apt-get update
-RUN apt-get install -y git zip zlib1g-dev libzip-dev zip && docker-php-ext-install zip pdo pdo_mysql
+RUN apt-get install -y zlib1g-dev g++ git libicu-dev zip libzip-dev zip \
+    && docker-php-ext-install intl opcache pdo pdo_mysql \
+    && docker-php-ext-install zip \
+    && docker-php-ext-configure zip \
+    && docker-php-ext-enable apcu
+
+RUN yes | pecl install xdebug
 
 WORKDIR /app
 RUN chmod 777 -R /app
