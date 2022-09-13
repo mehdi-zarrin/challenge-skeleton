@@ -7,13 +7,15 @@ services:
         container_name: ${SERVICE_NAME}_php
 
     nginx:
-        image: nginx:1.15.8-alpine
+        image: nginx:latest
         ports:
             - 127.0.0.1:${NGINX_PORT}:80
         volumes:
             - .:/app:cached
-            - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro,cached
+            - ./docker/nginx/templates:/etc/nginx/templates
         container_name: ${SERVICE_NAME}_nginx
+        env_file:
+            - ./.env
         depends_on:
             - php
 
