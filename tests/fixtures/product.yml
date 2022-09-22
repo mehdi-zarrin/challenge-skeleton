@@ -1,0 +1,4 @@
+App\Entity\Product:
+  product{0..10}:
+    name: <name()>
+    price: 1000

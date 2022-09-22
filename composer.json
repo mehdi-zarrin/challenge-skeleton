@@ -4,7 +4,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": ">=7.4",
+        "php": ">=8.0",
         "ext-ctype": "*",
         "ext-iconv": "*",
         "ext-json": "*",
@@ -28,7 +28,7 @@
     },
     "require-dev": {
         "behat/behat": "^3.11",
-        "behatch/contexts": "1.0",
+        "behatch/contexts": "dev-master",
         "dama/doctrine-test-bundle": "*",
         "doctrine/data-fixtures": "^1.5",
         "friends-of-behat/mink-browserkit-driver": "^1.6",
@@ -41,7 +41,7 @@
         "squizlabs/php_codesniffer": "^3.7",
         "symfony/browser-kit": "6.1.*",
         "symfony/css-selector": "6.1.*",
-        "symfony/maker-bundle": "^1.33",
+        "symfony/maker-bundle": "^1.39.1",
         "symfony/phpunit-bridge": "^6.1"
     },
     "repositories": [

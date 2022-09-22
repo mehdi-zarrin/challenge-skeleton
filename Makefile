@@ -43,3 +43,13 @@ analyse-code:
 		&& vendor/bin/phpcs \
 		&& vendor/bin/phpstan analyse src \
 		'
+
+prepare-local-test:
+	$(CONSOLE) doctrine:database:create --if-not-exists --no-debug --env=test
+	$(CONSOLE) doctrine:migration:migrate --env=test
+
+local-test:
+	$(EXEC) ./bin/phpunit --colors=always
+
+local-behat:
+	$(EXEC) ./vendor/bin/behat --format pretty --format progress --colors

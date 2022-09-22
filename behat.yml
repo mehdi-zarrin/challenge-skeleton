@@ -1,5 +1,16 @@
 default:
     suites:
+        default:
+            paths:
+                - '%paths.base%/features'
+            contexts:
+                - behatch:context:json
+                - behatch:context:table
+                - behatch:context:rest
+                - Behat\MinkExtension\Context\MinkContext
+                - MTZ\BehatContext\Wiremock\WiremockContext
+                - MTZ\BehatContext\Doctrine\DoctrineContext
+
         api:
             paths:
                 - '%paths.base%/features'
