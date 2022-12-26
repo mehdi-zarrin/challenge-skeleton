@@ -1,6 +1,6 @@
 [![Build Status](https://app.travis-ci.com/mehdi-zarrin/geolocation.svg?branch=master)](https://app.travis-ci.com/mehdi-zarrin/geolocation)
 
-# Coordinates resolver
+# Challenge Skeleton
 
 
 ## How to start the project
