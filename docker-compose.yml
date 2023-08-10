@@ -20,7 +20,7 @@ services:
             - php
 
     mysql:
-        image: mysql:5.7
+        image: mysql:latest
         volumes:
             - ./docker/mysql/data:/var/lib/mysql:cached
         ports:
@@ -31,7 +31,7 @@ services:
         container_name: ${SERVICE_NAME}_mysql
 
     mysql-test:
-        image: mysql:5.7
+        image: mysql:latest
         volumes:
             - ./docker/mysql/test/data:/var/lib/mysql
         ports:
