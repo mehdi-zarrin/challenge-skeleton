@@ -1,7 +1,7 @@
 [![Build Status](https://app.travis-ci.com/mehdi-zarrin/geolocation.svg?branch=master)](https://app.travis-ci.com/mehdi-zarrin/geolocation)
 
-# Coordinates resolver
-
+# Symfony Skeleton project
+using this project you can build a barebone php application which is containerized and ready for all kind of tests (behat, unit, feature, integration)
 
 ## How to start the project
 
