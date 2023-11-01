@@ -2,7 +2,7 @@
 
 namespace App\Message;
 
-class PurchaseConfirmationMessage
+class OrderPlacedMessage
 {
     public function __construct(private string $orderId)
     {

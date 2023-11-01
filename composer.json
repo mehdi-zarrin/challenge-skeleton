@@ -15,6 +15,7 @@
         "doctrine/orm": "^2.8",
         "guzzlehttp/guzzle": "^7.0",
         "phpdocumentor/reflection-docblock": "^5.3",
+        "symfony/amqp-messenger": "6.3.*",
         "symfony/console": "6.1.*",
         "symfony/doctrine-messenger": "6.1.*",
         "symfony/dotenv": "6.1.*",

@@ -41,6 +41,12 @@ services:
             MYSQL_DB_NAME: ${MYSQL_DB_NAME}
         container_name: test_${SERVICE_NAME}_mysql
 
+    rabbitmq:
+        image: rabbitmq:3.9.29-management
+        ports:
+            - "15673:15672"
+        container_name: ${SERVICE_NAME}_rabbitmq
+
     wiremock:
         image: wiremock/wiremock:2.33.2
         ports:
